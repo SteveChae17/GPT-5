@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹캠 스켈레톤 테스트</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>웹캠 스켈레톤 테스트</h1>
+      <p class="hint">원본 영상 저장 없이, 화면에는 스켈레톤만 렌더링합니다.</p>
+
+      <section class="viewer-frame">
+        <video id="camera" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+      </section>
+
+      <div class="controls">
+        <button id="startBtn">카메라 시작</button>
+        <span id="status">대기 중</span>
+      </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

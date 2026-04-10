@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  background: radial-gradient(circle at top, #14263f 0%, #070c14 60%);
+  color: #e9f1ff;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(90vw, 960px);
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+}
+
+.hint {
+  margin-top: 0;
+  color: #9db5d3;
+}
+
+.viewer-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #2d4f7a;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #02050b;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+#camera,
+#overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#camera {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#overlay {
+  background: #02050b;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #3f9dff, #2f62d8);
+  color: #f5fbff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#status {
+  color: #97ffc1;
+}
